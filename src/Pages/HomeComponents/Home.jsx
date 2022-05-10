@@ -2,6 +2,7 @@ import React from 'react';
 import bg from '../../assets/images/bg.png';
 import Navbar from '../Shared/Navbar';
 import CareSection from './CareSection';
+import ContactUs from './ContactUs';
 import HeroInfo from './HeroInfo';
 import HeroSection from './HeroSection';
 import MakeAppointment from './MakeAppointment';
@@ -24,6 +25,7 @@ const Home = () => {
       <CareSection />
       <MakeAppointment />
       <Testimonials />
+      <ContactUs />
     </div>
   );
 };
