@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/icons/logo.png';
 
 const Navbar = () => {
-  const [drawerOpen, setDrawerOpen] = useState(true);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const navLinks = [
     { id: 1, path: '/', name: 'Home' },
     { id: 2, path: '/appointment', name: 'Appointment' },
@@ -55,12 +55,12 @@ const Navbar = () => {
 
               <MdCloseFullscreen
                 onClick={() => setDrawerOpen(!drawerOpen)}
-                class="swap-off fill-current"
+                class="swap-on fill-current"
                 size={30}
               />
               <AiOutlineMenuUnfold
                 onClick={() => setDrawerOpen(!drawerOpen)}
-                class="swap-on fill-current"
+                class="swap-off fill-current"
                 size={30}
               />
             </label>
