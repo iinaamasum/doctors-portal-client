@@ -16,9 +16,9 @@ const Navbar = () => {
   return (
     <section
       style={{ maxWidth: '1024px' }}
-      className="container px-3 mx-auto relative"
+      className="container px-3 mx-auto relative pt-1"
     >
-      <div className="navbar bg-primary rounded-full mt-1 text-slate-700 flex">
+      <div className="navbar bg-primary rounded-full text-slate-700 flex">
         <div className="flex justify-between items-center w-full mx-3">
           <div
             className={`drawer ml-0 -mt-1 rounded-r lg:hidden absolute left-0 top-0 bg-accent ${
