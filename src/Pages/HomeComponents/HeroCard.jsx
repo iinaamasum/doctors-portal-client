@@ -5,14 +5,14 @@ const HeroCard = ({ info }) => {
   return (
     <div
       style={{ minHeight: '150px' }}
-      class={`shadow-xl flex justify-between items-center ${bg} rounded-lg
+      className={`shadow-xl flex justify-between items-center ${bg} rounded-lg
      px-6 text-white`}
     >
       <div>
         <img src={image} alt="" />
       </div>
-      <div class="card-body">
-        <h2 class="card-title">{title}</h2>
+      <div className="card-body">
+        <h2 className="card-title">{title}</h2>
         <p className="text-gray-200">{subTitle}</p>
       </div>
     </div>
