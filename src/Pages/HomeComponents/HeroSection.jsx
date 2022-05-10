@@ -1,5 +1,6 @@
 import React from 'react';
 import heroImg from '../../assets/images/chair.png';
+import Button from '../Shared/Button';
 
 const HeroSection = () => {
   return (
@@ -19,7 +20,7 @@ const HeroSection = () => {
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
             a id nisi.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <Button>Get Started</Button>
         </div>
       </div>
     </div>
