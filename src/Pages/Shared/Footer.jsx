@@ -55,7 +55,19 @@ const Footer = () => {
           <Link to="/">
             <img className="h-20" src={logo} alt="" />
           </Link>
-          <p>Copyright © {year} - All right reserved</p>
+          <p className="text-lg">
+            Copyright &copy; {year} - All right reserved to{' '}
+            <span className="text-red-600">
+              {' '}
+              <a
+                href="https://github.com/iinaamasum"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                iinaamasum
+              </a>
+            </span>
+          </p>
         </div>
         <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
           <div className="text-white flex justify-center items-center">
