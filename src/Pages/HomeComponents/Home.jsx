@@ -3,6 +3,7 @@ import bg from '../../assets/images/bg.png';
 import Navbar from '../Shared/Navbar';
 import HeroInfo from './HeroInfo';
 import HeroSection from './HeroSection';
+import Services from './Services';
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       </div>
 
       <HeroInfo />
+      <Services />
     </div>
   );
 };
