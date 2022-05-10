@@ -9,7 +9,7 @@ const CareSection = () => {
         <div class="hero-content flex-col md:flex-row justify-between items-center">
           <div className="w-full md:w-1/2">
             <img
-              className="w-full h-[400px] sm:h-[500px] image-full rounded-lg"
+              className="w-full h-[370px] sm:h-[500px] rounded-lg"
               src={care}
               alt=""
               class="max-w-sm rounded-lg shadow-2xl"

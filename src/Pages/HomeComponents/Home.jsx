@@ -4,6 +4,7 @@ import Navbar from '../Shared/Navbar';
 import CareSection from './CareSection';
 import HeroInfo from './HeroInfo';
 import HeroSection from './HeroSection';
+import MakeAppointment from './MakeAppointment';
 import Services from './Services';
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
       <HeroInfo />
       <Services />
       <CareSection />
+      <MakeAppointment />
     </div>
   );
 };
