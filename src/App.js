@@ -1,11 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/HomeComponents/Home';
-import Navbar from './Pages/Shared/Navbar';
 
 function App() {
   return (
-    <section className="bg-[#A4F4FD]">
-      <Navbar />
+    <section className="bg-[#ECFEFF]">
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/appointment" element={<Home />} />

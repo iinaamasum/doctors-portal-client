@@ -1,13 +1,9 @@
 import React from 'react';
-import bg from '../../assets/images/bg.png';
 import heroImg from '../../assets/images/chair.png';
 
 const HeroSection = () => {
   return (
-    <div
-      style={{ backgroundImage: `url(${bg})` }}
-      className="hero min-h-screen bg-no-repeat bg-center container px-1 sm:px-4 lg:px-10 mx-auto"
-    >
+    <div className="hero min-h-screen bg-no-repeat bg-center container px-1 sm:px-4 lg:px-10 mx-auto mb-32 md:mb-10">
       <div className="hero-content flex-col md:flex-row-reverse">
         <div className="w-full md:w-1/2">
           <img
