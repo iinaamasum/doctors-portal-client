@@ -12,7 +12,6 @@ const CareSection = () => {
               className="w-full h-[370px] sm:h-[500px] rounded-lg"
               src={care}
               alt=""
-              class="max-w-sm rounded-lg shadow-2xl"
             />
           </div>
           <div className="w-full md:w-1/2">
