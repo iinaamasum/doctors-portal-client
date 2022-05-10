@@ -1,6 +1,7 @@
 import React from 'react';
 import bg from '../../assets/images/bg.png';
 import Navbar from '../Shared/Navbar';
+import CareSection from './CareSection';
 import HeroInfo from './HeroInfo';
 import HeroSection from './HeroSection';
 import Services from './Services';
@@ -18,6 +19,7 @@ const Home = () => {
 
       <HeroInfo />
       <Services />
+      <CareSection />
     </div>
   );
 };
