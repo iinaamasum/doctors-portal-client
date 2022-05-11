@@ -32,7 +32,7 @@ const HeroInfo = () => {
     <>
       <section
         style={{ maxWidth: '1500px' }}
-        className="mx-auto px-1 sm:px-3 mt-[-100px] mb-10"
+        className="mx-auto px-1 sm:px-4 mt-[-100px] mb-10"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {cardInfo.map((info) => (

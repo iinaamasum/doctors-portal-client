@@ -28,7 +28,7 @@ const Footer = () => {
       style={{ backgroundImage: `url(${footerBg})` }}
       className="bg-cover bg-center"
     >
-      <div className="container mx-auto px-3 md:px-10 backdrop-brightness-90">
+      <div className="container mx-auto px-4 md:px-10 backdrop-brightness-90">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 p-10  text-accent">
           <div className="list-none">
             <span class="text-3xl text-primary font-bold">Our Services</span>

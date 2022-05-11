@@ -26,7 +26,7 @@ const Services = () => {
     },
   ];
   return (
-    <section className="my-16 md:my-24 container mx-auto px-3 md:px-10">
+    <section className="my-16 md:my-24 container mx-auto px-4 md:px-10">
       <div className="text-center my-14">
         <h5 className="text-secondary font-bold text-2xl">Our Services</h5>
         <h2 className="text-4xl">The Best Services We Provide</h2>

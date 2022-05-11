@@ -31,7 +31,7 @@ const Testimonials = () => {
   return (
     <section
       style={{ maxWidth: '1400px' }}
-      className="container mx-auto px-3 md:px-10"
+      className="container mx-auto px-4 md:px-10"
     >
       <h4 className="text-xl text-secondary font-bold">Testimonial</h4>
       <h2 className="text-4xl text-primary font-medium">

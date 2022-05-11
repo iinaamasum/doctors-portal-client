@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <section
       style={{ maxWidth: '1024px' }}
-      className="container px-3 mx-auto relative pt-1"
+      className="container px-2 mx-auto relative pt-1"
     >
       <div className="navbar bg-gradient-to-r from-[#19D3AE] to-[#0FCFEC] rounded-full text-gray-100 flex">
         <div className="flex justify-between items-center w-full mx-3">
