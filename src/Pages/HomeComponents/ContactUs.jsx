@@ -26,7 +26,7 @@ const ContactUs = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              class="input input-bordered input-primary w-full"
+              className="input input-bordered input-primary w-full"
             />
           </div>
           <div className="w-full mb-1">
@@ -37,7 +37,7 @@ const ContactUs = () => {
             <input
               type="text"
               placeholder="Subject here"
-              class="input input-bordered input-primary w-full"
+              className="input input-bordered input-primary w-full"
             />
           </div>
           <div className="w-full">
@@ -52,7 +52,7 @@ const ContactUs = () => {
               type="text"
               placeholder="Enter your feedback"
               style={{ border: '1px solid #0FCFEC' }}
-              class="rounded-lg p-3 focus:outline-offset-2 resize-none focus:ring-inset input-bordered input-primary w-full"
+              className="rounded-lg p-3 focus:outline-offset-2 resize-none focus:ring-inset input-bordered input-primary w-full"
             ></textarea>
           </div>
           <div className="text-center">

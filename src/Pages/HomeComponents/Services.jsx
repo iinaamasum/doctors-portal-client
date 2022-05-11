@@ -13,13 +13,13 @@ const Services = () => {
       img: img1,
     },
     {
-      id: 1,
+      id: 2,
       title: 'Cavity Filling',
       des: 'Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the',
       img: img2,
     },
     {
-      id: 1,
+      id: 3,
       title: 'Teeth Whitening',
       des: 'Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the',
       img: img3,

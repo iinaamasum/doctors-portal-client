@@ -14,7 +14,7 @@ const Navbar = () => {
     { id: 5, path: '/about', name: 'About' },
   ];
 
-  console.log(drawerOpen);
+  // console.log(drawerOpen);
   return (
     <section
       style={{ maxWidth: '1024px' }}
@@ -50,17 +50,17 @@ const Navbar = () => {
           </Link>
 
           <div className="lg:hidden">
-            <label class="btn btn-circle swap swap-rotate">
+            <label className="btn btn-circle swap swap-rotate">
               <input type="checkbox" />
 
               <MdCloseFullscreen
                 onClick={() => setDrawerOpen(!drawerOpen)}
-                class="swap-on fill-current"
+                className="swap-on fill-current"
                 size={30}
               />
               <AiOutlineMenuUnfold
                 onClick={() => setDrawerOpen(!drawerOpen)}
-                class="swap-off fill-current"
+                className="swap-off fill-current"
                 size={30}
               />
             </label>

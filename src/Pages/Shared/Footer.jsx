@@ -28,10 +28,12 @@ const Footer = () => {
       style={{ backgroundImage: `url(${footerBg})` }}
       className="bg-cover bg-center"
     >
-      <div className="container mx-auto px-4 md:px-10 backdrop-brightness-90">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 p-10  text-accent">
+      <div className="container mx-auto px-4 md:px-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 p-10  text-accent">
           <div className="list-none">
-            <span class="text-3xl text-primary font-bold">Our Services</span>
+            <span className="text-3xl text-primary font-bold">
+              Our Services
+            </span>
             <ul className="mt-3">
               {services.map((link) => (
                 <li className="hover:text-slate-500" key={link.id}>
@@ -41,7 +43,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="list-none">
-            <span class="text-3xl text-secondary font-bold">
+            <span className="text-3xl text-secondary font-bold">
               Important Links
             </span>
             <ul className="mt-3">
@@ -59,8 +61,8 @@ const Footer = () => {
             <h3 className="text-md mt-3">Email: iinaamasum@gamil.com</h3>
           </div>
         </div>
-        <div class="footer items-center p-4 text-accent">
-          <div class="items-center grid-flow-col">
+        <div className="footer items-center p-4 text-accent">
+          <div className="items-center grid-flow-col">
             <Link to="/">
               <img className="h-20" src={logo} alt="" />
             </Link>
@@ -78,7 +80,7 @@ const Footer = () => {
               </span>
             </p>
           </div>
-          <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+          <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
             <div className="text-accent flex justify-center items-center">
               <a
                 href="https://www.facebook.com/iinaamasum"

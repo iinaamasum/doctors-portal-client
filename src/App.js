@@ -5,7 +5,7 @@ import Footer from './Pages/Shared/Footer';
 
 function App() {
   return (
-    <section className="bg-[#ECFEFF]">
+    <section style={{ maxWidth: '1800px' }} className="bg-[#ECFEFF] mx-auto">
       {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />

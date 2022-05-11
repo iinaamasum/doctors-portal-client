@@ -4,7 +4,7 @@ import Button from '../Shared/Button';
 
 const HeroSection = () => {
   return (
-    <div className="hero min-h-screen bg-no-repeat bg-center container px-1 sm:px-4 lg:px-10 mx-auto mb-32 md:mb-10">
+    <div className="hero py-14 md:py-32 bg-no-repeat bg-center container px-1 sm:px-4 lg:px-10 mx-auto mb-32 md:mb-10">
       <div className="hero-content flex-col md:flex-row-reverse">
         <div className="w-full md:w-1/2">
           <img
