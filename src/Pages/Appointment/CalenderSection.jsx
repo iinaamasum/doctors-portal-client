@@ -14,11 +14,10 @@ const CalenderSection = ({ picked, setPicked }) => {
     >
       <div class="hero py-14">
         <div class="hero-content flex-col md:flex-row-reverse">
-          <img
-            src={heroImg}
-            class="w-full md:w-1/2 rounded-lg shadow-2xl"
-            alt=""
-          />
+          <div className="w-full md:w-1/2">
+            <img src={heroImg} class="rounded-lg shadow-2xl" alt="" />
+          </div>
+
           <div className="w-full md:w-1/2 mx-auto">
             <DayPicker mode="single" selected={picked} onSelect={setPicked} />
           </div>
