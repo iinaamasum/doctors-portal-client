@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../Shared/Button';
 
 const AppointmentCard = ({ booking, setTreatment }) => {
   const { name, slots } = booking;
@@ -23,16 +22,15 @@ const AppointmentCard = ({ booking, setTreatment }) => {
               {slots.length} {slots.length > 1 ? 'Spaces' : 'Space'} Available
             </p>
           </div>
-          <div class="">
-            <Button>Book Appointment</Button>
+          <div className="">
+            <label
+              onClick={() => setTreatment(booking)}
+              htmlFor="treatment-modal"
+              class="btn btn-primary bg-gradient-to-r from-[#19D3AE] to-[#0FCFEC] outline-none border-0 shadow text-white px-10"
+            >
+              Book Appointment
+            </label>
           </div>
-          <label
-            onClick={() => setTreatment(booking)}
-            htmlFor="treatment-modal"
-            class="btn modal-button"
-          >
-            open modal
-          </label>
         </div>
       </div>
     </section>
