@@ -1,17 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import {
+  useAuthState,
+  useSignInWithEmailAndPassword,
+} from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import loginImg from '../../../assets/images/login.png';
+import auth from '../../../firebase.init';
 import Navbar from '../../Shared/Navbar';
 import Social from '../Social/Social';
 
 const Login = () => {
+  const navigate = useNavigate();
+  const [user] = useAuthState(auth);
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const [signInWithEmailAndPassword, inputUser, inputLoading, inputError] =
+    useSignInWithEmailAndPassword(auth);
+  const onSubmit = (data) => {
+    signInWithEmailAndPassword(data.email, data.password);
+  };
+
+  useEffect(() => {
+    if (user) {
+      navigate('/');
+    }
+  }, [user, navigate]);
   return (
     <section>
       <Navbar />
@@ -30,13 +47,7 @@ const Login = () => {
           <div class="card w-full md:w-1/2 bg-base-100 shadow-lg mr-2">
             <div class="card-body">
               <h2 class="card-title mx-auto text-4xl md:my-5">LogIn</h2>
-              <form
-                className="w-full"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  handleSubmit(onSubmit);
-                }}
-              >
+              <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
                 <div class="form-control w-full">
                   <label class="">
                     <span class="text-secondary font-semibold text-lg">
@@ -132,9 +143,7 @@ const Login = () => {
                 />
               </form>
               <div class="divider text-lg font-semibold">Social LogIn</div>
-              <div className="">
-                <Social />
-              </div>
+              <Social />
             </div>
           </div>
         </div>

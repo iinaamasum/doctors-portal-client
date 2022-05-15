@@ -21,10 +21,16 @@ const Social = () => {
 
   const [user] = useAuthState(auth);
 
-  if (errorFb || errorGit || errorGo) {
+  useEffect(() => {
     const err = errorFb || errorGit || errorGo;
-    toast.error(`${err}`);
-  }
+    if (
+      err?.message.includes('auth/account-exists-with-different-credential')
+    ) {
+      toast.error(
+        `User already exist with this email. Please use another email or give correct credential`
+      );
+    }
+  }, [errorFb, errorGit, errorGo]);
 
   useEffect(() => {
     if (user) {
