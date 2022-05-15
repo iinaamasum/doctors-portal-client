@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../Shared/Button';
 
-const AppointmentCard = ({ booking }) => {
+const AppointmentCard = ({ booking, setTreatment }) => {
   const { name, slots } = booking;
   return (
     <section>
@@ -26,6 +26,13 @@ const AppointmentCard = ({ booking }) => {
           <div class="">
             <Button>Book Appointment</Button>
           </div>
+          <label
+            onClick={() => setTreatment(booking)}
+            htmlFor="treatment-modal"
+            class="btn modal-button"
+          >
+            open modal
+          </label>
         </div>
       </div>
     </section>
