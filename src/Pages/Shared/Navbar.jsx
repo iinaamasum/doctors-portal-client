@@ -1,11 +1,16 @@
+import { signOut } from 'firebase/auth';
 import React, { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-hot-toast';
 import { AiOutlineMenuUnfold } from 'react-icons/ai';
 import { MdCloseFullscreen } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/icons/logo.png';
+import auth from '../../firebase.init';
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [user] = useAuthState(auth);
   const navLinks = [
     { id: 1, path: '/', name: 'Home' },
     { id: 2, path: '/appointment', name: 'Appointment' },
@@ -38,18 +43,29 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              <Link
-                className="w-full btn bg-slate-400 text-black  my-2"
-                to="/login"
-              >
-                LogIn
-              </Link>
-              <Link
-                className="w-full btn bg-white outline-none border-0 text-accent hover:text-secondary"
-                to="/signup"
-              >
-                Register
-              </Link>
+              {user ? (
+                <button
+                  onClick={() => signOut(auth)}
+                  className="w-full btn bg-slate-400 text-black  my-2"
+                >
+                  Sign Out
+                </button>
+              ) : (
+                <>
+                  <Link
+                    className="w-full btn bg-slate-400 text-black  my-2"
+                    to="/login"
+                  >
+                    LogIn
+                  </Link>
+                  <Link
+                    className="w-full btn bg-white outline-none border-0 text-accent hover:text-secondary"
+                    to="/signup"
+                  >
+                    Register
+                  </Link>
+                </>
+              )}
             </div>
           </div>
 
@@ -88,15 +104,30 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <Link className="btn bg-accent text-primary mr-2" to="/login">
-            LogIn
-          </Link>
-          <Link
-            className="btn bg-white outline-none border-0 text-accent hover:text-secondary mr-2"
-            to="/signup"
-          >
-            Register
-          </Link>
+          {user ? (
+            <button
+              onClick={() => {
+                toast.success(`Good Bye ${user.displayName}`);
+                signOut(auth);
+              }}
+              className="btn btn-outline text-lg rounded-full capitalize mr-2"
+              to="/login"
+            >
+              Sign Out
+            </button>
+          ) : (
+            <>
+              <Link className="btn bg-accent text-primary mr-2" to="/login">
+                LogIn
+              </Link>
+              <Link
+                className="btn bg-white outline-none border-0 text-accent hover:text-secondary mr-2"
+                to="/signup"
+              >
+                Register
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </section>

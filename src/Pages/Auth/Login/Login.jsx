@@ -18,17 +18,25 @@ const Login = () => {
 
       <div
         style={{ maxWidth: '1024px' }}
-        className="container mx-auto px-4 my-10 md:my-16"
+        className="container mx-auto px-4 mt-10"
       >
         <div className="md:flex md:flex-row-reverse">
-          <div className="w-full md:w-1/2 hidden md:block">
-            <img src={loginImg} alt="" />
-          </div>
+          <img
+            className="w-full md:w-1/2 hidden md:block"
+            src={loginImg}
+            alt=""
+          />
 
           <div class="card w-full md:w-1/2 bg-base-100 shadow-lg mr-2">
-            <div class="card-body mt-6">
+            <div class="card-body">
               <h2 class="card-title mx-auto text-4xl md:my-5">LogIn</h2>
-              <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
+              <form
+                className="w-full"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  handleSubmit(onSubmit);
+                }}
+              >
                 <div class="form-control w-full">
                   <label class="">
                     <span class="text-secondary font-semibold text-lg">
@@ -122,9 +130,11 @@ const Login = () => {
                   value="LogIn"
                   type="submit"
                 />
-                <div class="divider">Social LogIn</div>
-                <Social />
               </form>
+              <div class="divider text-lg font-semibold">Social LogIn</div>
+              <div className="">
+                <Social />
+              </div>
             </div>
           </div>
         </div>
