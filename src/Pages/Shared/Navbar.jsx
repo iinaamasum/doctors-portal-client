@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center w-full mx-3">
           <div
             className={`drawer ml-0 -mt-1 rounded-r lg:hidden absolute left-0 top-0 bg-accent z-50 ${
-              drawerOpen ? 'w-1/2' : 'hidden'
+              drawerOpen ? 'w-2/3 sm:w-1/2' : 'hidden'
             } `}
           >
             <div className="drawer-side rounded mx-auto mt-5">
@@ -38,6 +38,18 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
+              <Link
+                className="w-full btn bg-slate-400 text-black  my-2"
+                to="/login"
+              >
+                LogIn
+              </Link>
+              <Link
+                className="w-full btn bg-white outline-none border-0 text-accent hover:text-secondary"
+                to="/signup"
+              >
+                Register
+              </Link>
             </div>
           </div>
 
@@ -76,6 +88,15 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          <Link className="btn bg-accent text-primary mr-2" to="/login">
+            LogIn
+          </Link>
+          <Link
+            className="btn bg-white outline-none border-0 text-accent hover:text-secondary mr-2"
+            to="/signup"
+          >
+            Register
+          </Link>
         </div>
       </div>
     </section>

@@ -1,5 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Appointment from './Pages/Appointment/Appointment';
+import Login from './Pages/Auth/Login/Login';
+import SignUP from './Pages/Auth/SignUp/SignUp';
 import Home from './Pages/HomeComponents/Home';
 import Error404 from './Pages/Shared/Error404';
 import Footer from './Pages/Shared/Footer';
@@ -14,6 +16,8 @@ function App() {
         <Route path="/reviews" element={<Home />} />
         <Route path="/contact" element={<Home />} />
         <Route path="/about" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUP />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
